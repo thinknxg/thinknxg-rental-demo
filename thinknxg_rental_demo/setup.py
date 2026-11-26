@@ -10,6 +10,7 @@ ATTEMPT_KEY = "rental_demo_seed_attempts"
 CONFIG_COMPANY = "rental_demo_seed_company"
 CONFIG_FORCE = "rental_demo_force_company"
 DEFAULT_ABBR = "NXGR"
+DEFAULT_COMPANY = "NXG Gulf Formwork Rentals LLC"
 
 
 def _log(title, message):
@@ -70,9 +71,7 @@ def ensure_fiscal_year():
 
 
 def _seed_if_needed():
-    company = frappe.conf.get(CONFIG_COMPANY)
-    if not company:
-        return  # not opted in
+    company = frappe.conf.get(CONFIG_COMPANY) or DEFAULT_COMPANY
 
     if frappe.db.exists("Item", {"item_code": ["like", "NXGRD%"]}):
         return  # already seeded
