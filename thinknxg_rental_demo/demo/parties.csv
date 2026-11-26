@@ -1,0 +1,5 @@
+key,kind,party_name,city,address_line1,project_name,site_name
+OWN,Customer,NXGRD Palm Quay Civil Works LLC,Dubai,Demo Plot A-17 Dubai South,NXGRD Palm Quay Podium Expansion,NXGRD Palm Quay Podium
+JOB,Customer,NXGRD Meridian Trade Centre BuildCo LLC,Abu Dhabi,Demo Plot B-04 Mussafah,NXGRD Meridian Atrium Access,NXGRD Meridian Atrium
+CROSS,Customer,NXGRD Creekstone Infrastructure LLC,Sharjah,Demo Plot C-22 Al Sajaa,NXGRD Creekstone Flyover Package,NXGRD Creekstone Flyover
+SUP,Supplier,NXGRD Falcon Span Equipment Supply LLC,Ajman,Demo Plot D-11 Al Jurf,,

@@ -1,0 +1,74 @@
+{
+  "currency": "AED",
+  "country": "United Arab Emirates",
+  "package_id": "NXGRD",
+  "offsets": {
+    "own_dispatch": 2,
+    "job_dispatch": 3,
+    "cross_receipt": 5,
+    "cross_dispatch": 6,
+    "own_off_hire": 8,
+    "own_return": 9,
+    "own_bill_through": 15,
+    "job_dismantle": 16,
+    "cross_off_hire": 16,
+    "cross_return": 17,
+    "supplier_return": 18,
+    "own_end": 29,
+    "cross_end": 30
+  },
+  "own": {
+    "order": {
+      "NXGRD-FW-1200": 60,
+      "NXGRD-PR-350": 80,
+      "NXGRD-AC-CLAMP": 120
+    },
+    "returned": {
+      "NXGRD-FW-1200": 20,
+      "NXGRD-PR-350": 20,
+      "NXGRD-AC-CLAMP": 40
+    },
+    "lost": {
+      "NXGRD-FW-1200": 1
+    },
+    "inspection": {
+      "NXGRD-FW-1200": {
+        "repairable_qty": 2,
+        "damaged_qty": 1
+      }
+    },
+    "grace_days": 1
+  },
+  "job": {
+    "code": "NXGRD-JOB-ATRIUM",
+    "label": "Atrium Access Scaffold Package",
+    "location": "Atrium east elevation",
+    "kit": {
+      "NXGRD-SC-STD": 24,
+      "NXGRD-SC-LDG": 36,
+      "NXGRD-SC-DECK": 16,
+      "NXGRD-SC-JACK": 24,
+      "NXGRD-SC-BRACE": 8
+    },
+    "included_days": 10,
+    "contract_rate": 4800,
+    "excess_daily_rate": 180
+  },
+  "cross": {
+    "item": "NXGRD-SH-TOWER",
+    "total_qty": 32,
+    "borrowed_qty": 20,
+    "supplier_daily_rate": 6.25
+  },
+  "expected": {
+    "opening_stock_value": 131380,
+    "own_at_site_qty": 179,
+    "own_rental_net": 4091.5,
+    "damage_net": 470,
+    "job_contract_net": 4800,
+    "job_excess_net": 720,
+    "cross_owned_at_site_qty": 12,
+    "supplier_net": 1625,
+    "own_pro_forma_deposit": 2200
+  }
+}

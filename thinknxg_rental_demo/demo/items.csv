@@ -1,0 +1,13 @@
+item_code,item_name,category,opening_qty,valuation_rate,weight_kg,daily_rate,weekly_rate,monthly_rate,deposit_per_unit,replacement_value,repair_charge,lost_charge,beyond_repair_charge
+NXGRD-FW-1200,Framed Formwork Panel 1200 x 600 mm,Formwork,160,185,24,3.50,21,75,20,250,35,220,180
+NXGRD-FW-1800,Framed Formwork Panel 1800 x 600 mm,Formwork,60,250,33,4.75,28,100,30,350,50,310,265
+NXGRD-PR-350,Adjustable Steel Prop 3.5 m,Shoring / Props,300,72,10,1.20,7,25,8,115,18,100,85
+NXGRD-PR-450,Heavy-Duty Steel Prop 4.5 m,Shoring / Props,80,115,15,1.65,10,35,12,165,24,145,130
+NXGRD-AC-CLAMP,Formwork Panel Alignment Clamp,Accessories,400,17,2,0.35,2,7,3,28,5,25,22
+NXGRD-AC-UHEAD,Adjustable U-Head Jack 600 mm,Accessories,150,38,5,0.60,3.5,13,5,60,10,55,46
+NXGRD-SC-STD,Cuplock Standard 2.5 m,Scaffolding,220,58,13,0.90,5.5,20,6,88,14,78,70
+NXGRD-SC-LDG,Cuplock Ledger 1.8 m,Scaffolding,300,29,6,0.50,3,11,4,52,9,47,40
+NXGRD-SC-DECK,Galvanized Steel Deck 2.0 m,Scaffolding,100,75,16,1.25,7.5,28,9,120,20,105,95
+NXGRD-SC-JACK,Adjustable Base Jack 600 mm,Scaffolding,180,30,4,0.55,3.3,12,4,52,8,46,40
+NXGRD-SH-TOWER,Heavy-Duty Shoring Tower Frame,Shoring / Props,12,460,39,11,66,240,45,680,85,600,530
+NXGRD-SC-BRACE,Cuplock Diagonal Brace 2.5 m,Scaffolding,100,36,8,0.60,3.6,14,5,65,10,59,50
