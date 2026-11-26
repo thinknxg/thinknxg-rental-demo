@@ -54,3 +54,33 @@ def run_now():
         frappe.throw("Administrator only")
     frappe.enqueue("thinknxg_rental_demo.setup.seed_if_needed", queue="long", timeout=3000)
     return "Queued. Check Error Log for 'Rental demo seed' in a few minutes."
+
+
+@frappe.whitelist()
+def restore_settings():
+    if frappe.session.user != "Administrator":
+        frappe.throw("Administrator only")
+    from thinknxg_rental_demo.setup import restore_settings as _restore
+    return _restore()
+
+
+@frappe.whitelist()
+def status():
+    if frappe.session.user != "Administrator":
+        frappe.throw("Administrator only")
+    from thinknxg_rental_demo.setup import DEFAULT_COMPANY
+    company = frappe.conf.get("rental_demo_seed_company") or DEFAULT_COMPANY
+    return {
+        "rental_settings_company": frappe.db.get_single_value("Rental Settings", "company"),
+        "demo_company_exists": bool(frappe.db.exists("Company", company)),
+        "nxgrd_items": frappe.db.count("Item", {"item_code": ["like", "NXGRD%"]}),
+        "stock_ledger_entries_demo_company": frappe.db.count("Stock Ledger Entry", {"company": company}),
+        "attempts_used": frappe.db.get_default("rental_demo_seed_attempts"),
+        "latest_logs": frappe.get_all(
+            "Error Log",
+            filters={"method": ["like", "Rental demo seed%"]},
+            fields=["creation", "method"],
+            order_by="creation desc",
+            limit=6,
+        ),
+    }
