@@ -81,6 +81,7 @@ def _seed_if_needed():
     if attempts >= MAX_APPLY_ATTEMPTS:
         return
 
+    _log("Rental demo seed started", f"company={company}, attempt={attempts + 1}")
     frappe.set_user("Administrator")
 
     if frappe.db.exists("Company", company):

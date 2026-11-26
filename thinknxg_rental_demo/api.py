@@ -46,3 +46,11 @@ def apply(company, start=None, sales_tax_template=None):
 def _apply_job(company, start=None, sales_tax_template=None):
     status, output = _run(company, start, sales_tax_template, apply=True)
     frappe.log_error(title=f"Rental demo seed {status}", message=output)
+
+
+@frappe.whitelist()
+def run_now():
+    if frappe.session.user != "Administrator":
+        frappe.throw("Administrator only")
+    frappe.enqueue("thinknxg_rental_demo.setup.seed_if_needed", queue="long", timeout=3000)
+    return "Queued. Check Error Log for 'Rental demo seed' in a few minutes."
