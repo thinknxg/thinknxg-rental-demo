@@ -67,8 +67,8 @@ def run(company, start=None, *, apply=False, sales_tax_template=None):
     for field in ("rental_charge_item", "cross_hire_charge_item", "damage_recovery_item", "loss_recovery_item"):
         check(settings.get(field) and frappe.db.exists("Item", settings.get(field)),
               f"Run rental setup to create the service item for {field}.")
-    profile = frappe.db.get_value("Rental Company Profile", {"company": company}, ["name", "currency", "vat_country"], as_dict=True)
-    check(profile and profile.currency == "AED" and profile.vat_country == scenario["country"],
+    profile = frappe.db.get_value("Rental Company Profile", {"company": company}, ["name", "currency", "country"], as_dict=True)
+    check(profile and profile.currency == "AED" and profile.country == scenario["country"],
           "Configure this company's UAE Rental Company Profile in AED.")
     if sales_tax_template:
         template = frappe.db.get_value("Sales Taxes and Charges Template", sales_tax_template, ["company", "disabled"], as_dict=True)
